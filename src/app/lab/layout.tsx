@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   title: "Mathias Boulanger",
   description:
     "Product Manager and AI Product Builder. On some products I lead the team that builds them, on others I build them myself, directing AI.",
+  // A design candidate living alongside the page it may replace. Two pages
+  // carrying the same facts on one domain split their own search signals, so
+  // this one stays out of the index until it either wins or is dropped.
+  robots: { index: false, follow: false },
 };
 
 export default function LabLayout({ children }: { children: React.ReactNode }) {

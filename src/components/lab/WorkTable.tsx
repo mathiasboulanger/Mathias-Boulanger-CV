@@ -9,16 +9,18 @@ type Filter = "all" | Mode;
 
 const FILTERS: { id: Filter; label: string }[] = [
   { id: "all", label: "Everything" },
-  { id: "led", label: "I led the build" },
+  { id: "led", label: "I led it" },
   { id: "built", label: "I built it" },
+  { id: "taught", label: "I taught it" },
 ];
 
 /**
  * The work as an interrogable table rather than a card grid.
  *
- * Two reasons it is a table. It scales past eight rows where a grid of
+ * Two reasons it is a table. It scales past a dozen rows where a grid of
  * identical cards stops being readable, and the filter is the argument the
- * page is making: the same person sits on both sides of the build.
+ * page is making: leading it, building it and teaching it are three ways of
+ * working, and the same person did all three.
  *
  * A row expands in place. Nothing navigates away, because the narrative has
  * one direction and a detail page would break it.
@@ -37,6 +39,7 @@ export default function WorkTable() {
       all: WORK.length,
       led: WORK.filter((w) => w.mode === "led").length,
       built: WORK.filter((w) => w.mode === "built").length,
+      taught: WORK.filter((w) => w.mode === "taught").length,
     }),
     [],
   );

@@ -6,13 +6,13 @@
  * incumbent page did.
  */
 
-export type Mode = "led" | "built";
+export type Mode = "led" | "built" | "taught";
 
 export interface Work {
   id: string;
   name: string;
   context: string;
-  /** Which of the two modes this piece sat in. The table filters on it. */
+  /** Which of the three modes this piece sat in. The table filters on it. */
   mode: Mode;
   year: string;
   /** The single fact that earns the row. */
@@ -79,6 +79,26 @@ export const WORK: Work[] = [
     proof:
       "Two company-wide training sessions, a champion per department, executive sponsors, and results presented to the executive committee. One attendee became the first measured case.",
     stack: ["Enablement", "Training", "Governance"],
+  },
+  {
+    id: "company-training",
+    name: "Company-wide AI training",
+    context: "Qobuz",
+    mode: "taught",
+    year: "2025",
+    proof:
+      "Two sessions delivered to the whole company. One attendee went on to become the first measured case: a mailbox triage that went from three hours to five minutes.",
+    stack: ["Training", "Adoption"],
+  },
+  {
+    id: "ecoclimasol",
+    name: "Turning a CEO into a builder",
+    context: "Ecoclimasol",
+    mode: "taught",
+    year: "2025",
+    proof:
+      "Trained a non-technical CEO to direct AI himself: what to delegate to a model, what to review, and the security practices around it. He shipped a full backend migration to Django in a week, work that used to sit in his development team's queue.",
+    stack: ["Enablement", "Django", "Security practices"],
   },
   {
     id: "internal-agent",

@@ -117,11 +117,11 @@ export default function Lab() {
           className="mx-auto max-w-6xl px-6 py-28 sm:px-12 lg:pl-20"
         >
           <h2 className="lab-display mb-4 max-w-[14ch] text-[clamp(2rem,5vw,3.5rem)]">
-            Nine things, two ways of working
+            Eleven things, three ways of working
           </h2>
           <p className="mb-14 max-w-prose text-[var(--paper-dim)]">
-            Filter by which side of the build I was on. The same person is on
-            both, which is the whole argument.
+            Some of these I led, some I built with my own hands, and some I
+            taught someone else to build. Filter by which.
           </p>
           <WorkTable />
         </section>

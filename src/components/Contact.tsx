@@ -14,9 +14,9 @@ export default function Contact() {
             Let&apos;s talk
           </h2>
           <p className="text-muted text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-            I&apos;m looking for my next PM role where I can combine product
-            strategy with hands-on AI building. Open to conversations about how
-            I can help your team ship faster.
+            I&apos;m looking for my next role building AI products, or leading
+            AI adoption inside a company. Relocating from Paris to Buenos Aires
+            and working remote, across European and American time zones.
           </p>
         </AnimatedSection>
 
@@ -65,7 +65,7 @@ export default function Contact() {
       {/* Footer */}
       <div className="max-w-5xl mx-auto mt-24 pt-8 border-t border-border">
         <p className="text-center text-xs text-muted/50">
-          Built with Next.js, Tailwind CSS, and Framer Motion. Shipped fast, as a PM should.
+          Built with Next.js, Tailwind CSS and Framer Motion. Directed, reviewed and shipped by me.
         </p>
       </div>
     </section>

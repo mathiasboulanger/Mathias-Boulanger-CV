@@ -38,6 +38,42 @@ const projects: Project[] = [
     status: "Launching June/July 2026",
   },
   {
+    id: "ai-enablement",
+    title: "AI Enablement & Agentic Commerce",
+    role: "AI Referent & Product Manager @ Qobuz",
+    challenge:
+      "Evaluate how AI agents could transform music e-commerce and position Qobuz as a first-mover.",
+    actions: [
+      "Trained teams on AI tools and evaluated platforms for internal adoption",
+      "Led strategic exploration of Universal Commerce Protocol (UCP)",
+      "Analyzed competitive landscape (AI traffic growth, conversion lift data, market sizing)",
+      "Built business case and strategic recommendation presented to C-suite",
+    ],
+    result:
+      "Executive-level strategic recommendation framing Qobuz's entry into agentic commerce",
+    stack: ["Claude", "Research", "Strategic analysis"],
+  },
+  {
+    id: "internal-ai-agent",
+    title: "Internal AI Agent on Company Data",
+    role: "Product Manager & Builder @ Qobuz",
+    challenge:
+      "Cross-checking a drop in satisfaction against what customers actually write meant opening several tools, so nobody did it.",
+    actions: [
+      "Built an agent you question in plain language, which looks up the answer across product indicators and live satisfaction feedback and replies citing its sources",
+      "Runs on a local model, so no company data leaves the machine",
+      "Turned a cross-check nobody was performing into a question anyone can ask out loud",
+    ],
+    result:
+      "Produced a useful business finding the day it was connected",
+    stack: ["Local LLM", "RAG", "SQL", "Next.js", "FastAPI"],
+    media: {
+      src: "/projects/internal-ai-agent.webp",
+      alt: "The agent's question screen, asking about satisfaction over the last 30 days",
+      fit: "cover",
+    },
+  },
+  {
     id: "ai-content",
     title: "AI Content Pipeline for a Non-Profit",
     role: "AI & Automation Consultant @ NoCode for Good",
@@ -84,22 +120,6 @@ const projects: Project[] = [
       alt: "The scoring workflow in n8n during the live session",
       fit: "cover",
     },
-  },
-  {
-    id: "ai-enablement",
-    title: "AI Enablement & Agentic Commerce",
-    role: "AI Referent & Product Manager @ Qobuz",
-    challenge:
-      "Evaluate how AI agents could transform music e-commerce and position Qobuz as a first-mover.",
-    actions: [
-      "Trained teams on AI tools and evaluated platforms for internal adoption",
-      "Led strategic exploration of Universal Commerce Protocol (UCP)",
-      "Analyzed competitive landscape (AI traffic growth, conversion lift data, market sizing)",
-      "Built business case and strategic recommendation presented to C-suite",
-    ],
-    result:
-      "Executive-level strategic recommendation framing Qobuz's entry into agentic commerce",
-    stack: ["Claude", "Research", "Strategic analysis"],
   },
   {
     id: "podium-fantasy",
@@ -166,21 +186,6 @@ const projects: Project[] = [
       alt: "Reel Coach analysing a post on mobile",
       fit: "contain",
     },
-  },
-  {
-    id: "internal-ai-agent",
-    title: "Internal AI Agent on Company Data",
-    role: "Product Manager & Builder @ Qobuz",
-    challenge:
-      "Cross-checking a drop in satisfaction against what customers actually write meant opening several tools, so nobody did it.",
-    actions: [
-      "Built an agent you question in plain language, which looks up the answer across product indicators and live satisfaction feedback and replies citing its sources",
-      "Runs on a local model, so no company data leaves the machine",
-      "Turned a cross-check nobody was performing into a question anyone can ask out loud",
-    ],
-    result:
-      "Produced a useful business finding the day it was connected",
-    stack: ["Local LLM", "RAG", "SQL", "Next.js", "FastAPI"],
   },
 ];
 

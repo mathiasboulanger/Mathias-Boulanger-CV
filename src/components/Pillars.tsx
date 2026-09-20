@@ -43,7 +43,7 @@ const pillars = [
     ),
     title: "AI Enablement",
     description:
-      "Train teams on AI tools, evaluate platforms, build adoption strategies, lead AI transformation.",
+      "Run an AI Champions program with executive sponsors across 100+ people: training, platform evaluation, measured adoption.",
   },
   {
     icon: (
@@ -66,7 +66,7 @@ const pillars = [
     ),
     title: "Prototyping & Building",
     description:
-      "Ship functional POCs using no-code/low-code and code. Validate hypotheses before engineering investment.",
+      "Direct AI to build working products, then validate the hypothesis before any engineering investment.",
   },
 ];
 

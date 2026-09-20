@@ -4,24 +4,58 @@ import AnimatedSection from "./AnimatedSection";
 
 const categories = [
   {
-    name: "Product & Collaboration",
-    tools: ["Notion", "Jira", "Slack", "Confluence", "Figma", "Miro", "G Suite"],
+    name: "AI Enablement",
+    tools: [
+      "Adoption programs",
+      "Team training",
+      "Use case discovery",
+      "Executive buy-in",
+      "Impact measurement",
+    ],
   },
   {
-    name: "Analytics & Data",
-    tools: ["Mixpanel", "Looker", "Google Analytics", "Chattermill", "SQL"],
+    name: "Applied AI",
+    tools: [
+      "LLM workflows",
+      "Agent orchestration",
+      "MCP servers",
+      "Eval design",
+      "RAG",
+      "Prompt engineering",
+      "AI-assisted development",
+    ],
+  },
+  {
+    name: "Product",
+    tools: [
+      "Discovery",
+      "Roadmap",
+      "Specs",
+      "A/B testing",
+      "Analytics",
+      "Stakeholder management",
+    ],
+  },
+  {
+    name: "Delivery",
+    tools: [
+      "Cross-functional squads",
+      "Multi-market launches",
+      "Implementation from kickoff to go-live",
+    ],
   },
   {
     name: "AI & Automation",
-    tools: ["Claude (Anthropic)", "n8n", "Make.com", "ChatGPT", "OpenAI API"],
+    tools: ["Claude", "Claude Code", "MCP", "n8n", "Make.com", "LLM APIs"],
   },
   {
-    name: "Design & Creation",
-    tools: ["Figma", "Premiere Pro", "Photoshop"],
+    // Names the stack behind what is in production without claiming to write it.
+    name: "Shipped with AI",
+    tools: ["Next.js", "Prisma", "Postgres", "Directus", "Vercel", "Railway"],
   },
   {
-    name: "Development",
-    tools: ["Next.js", "React", "Tailwind CSS", "Prisma", "PostgreSQL", "Replit"],
+    name: "Product & Analytics",
+    tools: ["Mixpanel", "Looker", "Jira", "Notion", "Confluence", "Figma", "Airtable"],
   },
 ];
 

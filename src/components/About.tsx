@@ -11,7 +11,7 @@ const facts = [
         <path d="M2 12h20" />
       </svg>
     ),
-    text: "Franco-Argentine, based in Paris",
+    text: "Franco-Argentine, in Paris, relocating to Buenos Aires",
   },
   {
     icon: (

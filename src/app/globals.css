@@ -1,6 +1,22 @@
 @import "tailwindcss";
 
+/* Tailwind resolves bg-card, text-muted and friends from @theme inline, which
+   reads these at :root. The values live here; .classic-root below is what
+   actually paints, so the root page is unaffected. */
 :root {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --muted: #a1a1aa;
+  --accent: #f59e0b;
+  --accent-dim: #d97706;
+  --card: #18181b;
+  --card-hover: #1f1f23;
+  --border: #27272a;
+}
+
+/* The first design's world, now scoped to its own route so it cannot bleed
+   into the page at the root. */
+.classic-root {
   --background: #09090b;
   --foreground: #fafafa;
   --muted: #a1a1aa;
@@ -25,17 +41,24 @@
   --font-serif: var(--font-instrument-serif);
 }
 
-body {
+.classic-root {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* The page at the root owns the default ground, so there is no white flash
+   behind it while fonts load. */
+body {
+  background: #07070a;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-::selection {
+.classic-root ::selection {
   background: rgba(245, 158, 11, 0.3);
   color: #fafafa;
 }

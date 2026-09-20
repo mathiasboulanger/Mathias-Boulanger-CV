@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Instrument_Serif } from "next/font/google";
+import {
+  Bricolage_Grotesque,
+  Public_Sans,
+  JetBrains_Mono,
+} from "next/font/google";
 import "./globals.css";
+import "./lab.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +26,29 @@ const instrumentSerif = Instrument_Serif({
   style: ["normal", "italic"],
 });
 
+const display = Bricolage_Grotesque({
+  variable: "--font-display",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const bodyFace = Public_Sans({
+  variable: "--font-body",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const dataFace = JetBrains_Mono({
+  variable: "--font-data",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Mathias Boulanger | Product Manager & AI Builder",
+  title: "Mathias Boulanger | Product Manager & AI Product Builder",
   description:
-    "Product Manager combining product ownership with hands-on AI deployment. I ship prototypes fast, train teams on AI adoption, and measure impact on every initiative.",
+    "I'm drawn to products that change how people work. On some I lead the team that builds them, on others I build them myself, directing AI.",
   openGraph: {
     title: "Mathias Boulanger | Product Manager & AI Builder",
     description:
@@ -46,9 +71,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${display.variable} ${bodyFace.variable} ${dataFace.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="flex min-h-full flex-col">
         {children}
       </body>
     </html>

@@ -69,6 +69,10 @@ export default function WorkTable() {
         })}
       </div>
 
+      <p className="lab-data mb-3 text-[0.7rem] text-[var(--paper-dim)]">
+        Open a row for the evidence
+      </p>
+
       <div className="border-t border-[var(--line)]">
         {rows.map((w) => {
           const isOpen = open === w.id;
@@ -78,7 +82,7 @@ export default function WorkTable() {
                 type="button"
                 onClick={() => setOpen(isOpen ? null : w.id)}
                 aria-expanded={isOpen}
-                className="group grid w-full cursor-pointer grid-cols-[1fr_auto] items-baseline gap-x-6 gap-y-1 py-5 text-left sm:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_auto]"
+                className="group grid w-full cursor-pointer grid-cols-[minmax(0,1fr)_6.5rem_2rem] items-center gap-x-5 gap-y-1 py-5 pr-1 text-left transition-colors duration-200 hover:bg-white/[0.03] sm:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_6.5rem_2rem] sm:gap-x-6 sm:pl-2"
               >
                 <span className="lab-display text-2xl text-[var(--paper)] transition-colors duration-200 group-hover:text-[var(--signal)] sm:text-[1.75rem]">
                   {w.name}
@@ -86,8 +90,31 @@ export default function WorkTable() {
                 <span className="lab-data col-start-1 text-xs text-[var(--paper-dim)] sm:col-start-2">
                   {w.context}
                 </span>
-                <span className="lab-data col-start-2 row-start-1 text-xs text-[var(--paper-dim)] sm:col-start-3">
+                <span className="lab-data col-start-2 row-start-1 text-right text-xs text-[var(--paper-dim)] sm:col-start-3">
                   {w.year}
+                </span>
+
+                {/* The affordance. Without it the rows read as a list, and
+                    nobody discovers that the evidence is one click down. */}
+                <span
+                  className={`col-start-3 row-start-1 justify-self-end rounded-full border p-1.5 transition-all duration-200 sm:col-start-4 ${
+                    isOpen
+                      ? "rotate-45 border-[var(--signal)] text-[var(--signal)]"
+                      : "border-[var(--line)] text-[var(--paper-dim)] group-hover:border-[var(--signal)] group-hover:text-[var(--signal)]"
+                  }`}
+                >
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 1v10M1 6h10" />
+                  </svg>
                 </span>
               </button>
 

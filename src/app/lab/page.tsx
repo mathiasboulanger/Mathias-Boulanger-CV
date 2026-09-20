@@ -191,7 +191,7 @@ export default function Lab() {
             alt="Mathias Boulanger"
             width={256}
             height={256}
-            className="h-40 w-40 rounded-full object-cover grayscale transition-all duration-500 hover:grayscale-0 md:h-56 md:w-56 md:justify-self-end"
+            className="h-40 w-40 rounded-full object-cover md:h-56 md:w-56 md:justify-self-end"
           />
         </div>
       </section>

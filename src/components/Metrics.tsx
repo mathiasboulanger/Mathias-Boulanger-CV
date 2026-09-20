@@ -49,7 +49,7 @@ const metrics: Metric[] = [
     value: "94",
     numericValue: 94,
     suffix: "%",
-    label: "Customer verbatim coverage, CSAT analysis",
+    label: "Customer verbatim coverage, turned into actionable items",
   },
   {
     value: "20",

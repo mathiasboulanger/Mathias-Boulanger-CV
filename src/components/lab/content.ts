@@ -53,7 +53,7 @@ export const SCALE = {
     { value: "20", unit: "%", label: "of company revenue, the platform I own" },
     { value: "100", unit: "+", label: "people in the AI adoption program I run" },
     { value: "3h", unit: "→ 5min", label: "a manual triage, after one automation" },
-    { value: "94", unit: "%", label: "customer verbatim coverage, CSAT analysis" },
+    { value: "94", unit: "%", label: "customer verbatim coverage, turned into actionable items" },
     { value: "5–10", unit: "h/wk", label: "returned to a business development team" },
     { value: "9", unit: "markets", label: "and 7 languages the store ships to" },
   ],
@@ -65,7 +65,7 @@ export const WORK: Work[] = [
     name: "Download Store rebuild",
     context: "Qobuz",
     mode: "led",
-    year: "2023–",
+    year: "2023–Today",
     proof:
       "Three programmes at once: a Symfony 1 to Symfony 7 migration, a headless CMS internal teams operate themselves, and the rollout of a new design system. Two squads across Design, Tech, CRM and Marketing.",
     stack: ["Directus", "Symfony", "Jira", "Figma"],
@@ -75,7 +75,7 @@ export const WORK: Work[] = [
     name: "AI Champions program",
     context: "Qobuz",
     mode: "led",
-    year: "2025–",
+    year: "2025–Today",
     proof:
       "Two company-wide training sessions, a champion per department, executive sponsors, and results presented to the executive committee. One attendee became the first measured case.",
     stack: ["Enablement", "Training", "Governance"],
@@ -142,7 +142,7 @@ export const WORK: Work[] = [
     name: "Podium Fantasy",
     context: "Personal, live",
     mode: "built",
-    year: "2025–",
+    year: "2025–Today",
     proof:
       "An F1 prediction game with real players. Cron jobs pull results from the public OpenF1 API and settle scores with no manual input.",
     stack: ["Next.js", "Prisma", "Postgres", "Railway"],
@@ -193,25 +193,25 @@ export const CRAFT = {
       title: "Evaluation on creative output",
       detail:
         "Text generated at temperature 1 defeats exact-string tests, so the golden set asserts on properties instead: valid shape, claims grounded in the source, a banned vocabulary, hypotheses phrased as hypotheses.",
-      where: "reel-coach/scripts/eval-prompts.ts",
+      where: "eval-prompts.ts, from the Reel Coach project",
     },
     {
       title: "A retrieval threshold placed from data",
       detail:
         "Two labelled question sets, on-topic and off-topic. The gap between them is what tells you where the relevance floor goes. It caught a timestamp bug that had looked like a ranking problem.",
-      where: "PodSearch/scripts/audit-retrieval.ts",
+      where: "audit-retrieval.ts, from the PodSearch project",
     },
     {
       title: "Guardrails that refuse before the mistake",
       detail:
         "Fifty agent skills and a set of hooks that block a bad commit, a stray log or an edit to a secrets file, rather than catching it in review.",
-      where: "MathiOS, in daily use",
+      where: "A personal OS, wired into mail, calendar, Slack, Jira and the knowledge base",
     },
     {
       title: "Continuous integration, not a demo branch",
       detail:
         "Seven repositories run their tests on every push. A prototype that cannot survive its own pipeline is a screenshot.",
-      where: "GitHub Actions, 7 repos",
+      where: "GitHub Actions, across 7 repositories",
     },
   ],
 };

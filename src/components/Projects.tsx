@@ -74,6 +74,20 @@ const projects: Project[] = [
     },
   },
   {
+    id: "mcp-shared-context",
+    title: "Shared MCP Context for Product, Engineering and QA",
+    role: "Product Manager & Builder @ Qobuz (in progress)",
+    challenge:
+      "Product, engineering and QA each brief their AI tools from scratch, so the same context gets re-explained three times and drifts apart between them.",
+    actions: [
+      "Building an MCP server with a developer so the three roles read one persistent, shared context instead of each maintaining their own",
+      "Designed around the Model Context Protocol, so any MCP-capable client can consume it rather than locking the team into one tool",
+      "Scoped the first surface around the work that already crosses the three roles: tickets, specs and test criteria",
+    ],
+    result: "In build. The design is agreed and the first surface is scoped.",
+    stack: ["MCP", "TypeScript", "Jira"],
+  },
+  {
     id: "ai-content",
     title: "AI Content Pipeline for a Non-Profit",
     role: "AI & Automation Consultant @ NoCode for Good",

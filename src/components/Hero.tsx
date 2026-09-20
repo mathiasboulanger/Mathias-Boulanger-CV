@@ -70,8 +70,9 @@ export default function Hero() {
           }}
           className="text-lg sm:text-xl text-muted max-w-2xl mx-auto leading-relaxed mb-12"
         >
-          I don&apos;t write the code. I decide what gets built, I direct the AI
-          that builds it, I review what comes out, and I ship it.
+          I decide what gets built, I direct the AI that builds it, I review
+          what comes out, and I ship it. Product owner on a platform driving
+          20% of company revenue, and AI lead for a 100+ person company.
         </motion.p>
 
         <motion.a

@@ -46,7 +46,7 @@ const categories = [
   },
   {
     name: "AI & Automation",
-    tools: ["Claude", "Claude Code", "MCP", "n8n", "Make.com", "LLM APIs"],
+    tools: ["Claude", "Claude Code", "Codex", "MCP", "n8n", "Make.com", "LLM APIs"],
   },
   {
     // Names the stack behind what is in production without claiming to write it.

@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { asset } from "@/lib/base-path";
 import AnimatedSection from "./AnimatedSection";
 
 interface Project {
@@ -14,6 +16,8 @@ interface Project {
   stack: string[];
   status?: string;
   link?: { href: string; label: string };
+  /** Qobuz work carries none on purpose: internal screens do not go public. */
+  media?: { src: string; alt: string; fit: "cover" | "contain" };
 }
 
 const projects: Project[] = [
@@ -51,6 +55,11 @@ const projects: Project[] = [
       href: "https://youtu.be/mV4yLqhmT4I",
       label: "Watch the session on No-code France",
     },
+    media: {
+      src: "/projects/nocode-make.webp",
+      alt: "No-code France session on the Make automation, February 2025",
+      fit: "cover",
+    },
   },
   {
     id: "ai-lead-scoring",
@@ -69,6 +78,11 @@ const projects: Project[] = [
     link: {
       href: "https://youtu.be/nkGQkhxtBQ8",
       label: "Watch the session on No-code France",
+    },
+    media: {
+      src: "/projects/ai-lead-scoring.webp",
+      alt: "The scoring workflow in n8n during the live session",
+      fit: "cover",
     },
   },
   {
@@ -94,10 +108,11 @@ const projects: Project[] = [
     challenge:
       "Build an F1 prediction game as a full-stack web application from scratch.",
     actions: [
-      "Designed and shipped MVP: prediction system, leaderboard, user accounts",
+      "Designed and shipped the MVP: prediction system, leaderboard, user accounts",
+      "Cron jobs sync race results from the public OpenF1 API and settle scores with no manual input",
       "Full-stack development from idea to deployed product, independently",
     ],
-    result: "Proof of ability to go from idea to deployed product independently",
+    result: "Live in production with real players, season after season",
     stack: [
       "Next.js 14",
       "React",
@@ -106,6 +121,12 @@ const projects: Project[] = [
       "PostgreSQL",
       "Railway",
     ],
+    link: { href: "https://www.podiumfantasy.com/", label: "Play it at podiumfantasy.com" },
+    media: {
+      src: "/projects/podium-fantasy.webp",
+      alt: "The Podium Fantasy race calendar on mobile",
+      fit: "contain",
+    },
   },
 ];
 
@@ -157,6 +178,23 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             inert={!isOpen}
           >
             <div className="pt-6 mt-6 border-t border-border">
+              {project.media && (
+                <div className="mb-6 rounded-xl overflow-hidden border border-border bg-background">
+                  <Image
+                    src={asset(project.media.src)}
+                    alt={project.media.alt}
+                    width={1120}
+                    height={630}
+                    loading="lazy"
+                    className={`w-full ${
+                      project.media.fit === "contain"
+                        ? "h-64 object-contain py-3"
+                        : "aspect-video object-cover"
+                    }`}
+                  />
+                </div>
+              )}
+
               <h4 className="text-sm font-semibold text-accent mb-3">
                 What I did
               </h4>

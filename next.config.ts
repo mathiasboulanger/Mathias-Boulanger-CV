@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
   outputFileTracingRoot: __dirname,
+  // GitHub Pages resolves an extension-less URL to <path>/index.html. Without
+  // this, `next export` writes out/lab.html and /lab 404s in production while
+  // working locally.
+  trailingSlash: true,
   basePath: "/Mathias-Boulanger-CV",
   images: {
     unoptimized: true,

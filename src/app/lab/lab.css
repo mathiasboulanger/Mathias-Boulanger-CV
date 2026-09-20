@@ -1,0 +1,83 @@
+/* Tokens and primitives for the /lab surface. Scoped to .lab-root so the
+   incumbent design keeps its own world while both are deployed. */
+
+.lab-root {
+  /* The descent: four grounds, cold to warm, one per pair of stages. */
+  --ink-900: #07070a;
+  --ink-800: #0c0d12;
+  --ink-700: #12141c;
+  --ink-600: #1a1d28;
+
+  --paper: #f2f1ee;
+  --paper-dim: #9a9aa6;
+  --line: #23262f;
+
+  --signal: #4ade80;
+  /* Passes 4.5:1 on every ground, so it can carry 12px text, not just borders. */
+  --signal-dim: #2e9e5b;
+
+  --stage-ground: var(--ink-900);
+
+  background: var(--stage-ground);
+  color: var(--paper);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  /* The tone travel. This is the authored moment, so it gets the long curve. */
+  transition: background-color 900ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.lab-root ::selection {
+  background: rgba(74, 222, 128, 0.25);
+  color: var(--paper);
+}
+
+.lab-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.lab-data {
+  font-family: var(--font-data), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Rule of the descent: a hairline that runs the length of the page and
+   carries the reader's position. Not decoration, it is the timeline. */
+.lab-spine {
+  position: fixed;
+  left: max(1.5rem, calc((100vw - 78rem) / 2));
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.lab-spine-progress {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  background: var(--signal);
+  transform-origin: top;
+}
+
+@media (max-width: 900px) {
+  .lab-spine {
+    display: none;
+  }
+}
+
+/* Every entrance collapses when the visitor asked for stillness. */
+@media (prefers-reduced-motion: reduce) {
+  .lab-root,
+  .lab-root * {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

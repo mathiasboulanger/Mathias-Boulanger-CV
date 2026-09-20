@@ -42,7 +42,7 @@ Anything that needs a server belongs somewhere else, not in this repo.
 
 ## basePath
 
-The site is served from a subpath, `/Mathias-Boulanger-CV`, because it is a GitHub Pages project site rather than a user site. `basePath` in `next.config.ts` handles this for `next/link` and `next/image`.
+The site is served from a subpath, `/Mathias-Boulanger-CV`, because it is a GitHub Pages project site rather than a user site. `basePath` in `next.config.ts` handles this for `next/link`. It does NOT handle `next/image` here, because `images.unoptimized` is on and the src is then emitted verbatim. Asset paths go through `asset()` in `src/lib/base-path.ts`.
 
 It does not handle hand written absolute paths. An `<a href="/cv.pdf">` or a `url(/bg.png)` in CSS resolves to the domain root and 404s in production while working fine in `npm run dev`. Use `next/link` for internal navigation and relative paths for assets, or prefix with the basePath explicitly.
 

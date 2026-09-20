@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { asset } from "@/lib/base-path";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -20,9 +22,24 @@ export default function Hero() {
 
       <div className="relative max-w-3xl mx-auto text-center">
         <motion.div
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          <Image
+            src={asset("/mathias.webp")}
+            alt="Mathias Boulanger"
+            width={128}
+            height={128}
+            priority
+            className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover mx-auto mb-8 ring-1 ring-accent/40"
+          />
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <p className="text-accent font-mono text-sm tracking-wider uppercase mb-6">
             Product Manager | AI & Product Builder

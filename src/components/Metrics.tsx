@@ -13,8 +13,8 @@ interface Metric {
 
 const metrics: Metric[] = [
   {
-    value: "40",
-    numericValue: 40,
+    value: "20",
+    numericValue: 20,
     suffix: "%",
     label: "Share of company revenue managed",
   },
@@ -38,13 +38,6 @@ const metrics: Metric[] = [
     prefix: "+",
     suffix: "%",
     label: "Average wallet size increase",
-  },
-  {
-    value: "18.9",
-    numericValue: 18.9,
-    suffix: "K",
-    prefix: "\u20AC",
-    label: "Daily revenue peak (Qobuz Fest)",
   },
   {
     value: "20",

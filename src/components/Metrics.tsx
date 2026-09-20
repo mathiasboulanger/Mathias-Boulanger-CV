@@ -19,6 +19,12 @@ const metrics: Metric[] = [
     label: "Share of company revenue managed",
   },
   {
+    value: "100",
+    numericValue: 100,
+    suffix: "+",
+    label: "People in the AI adoption program",
+  },
+  {
     value: "450",
     numericValue: 450,
     prefix: "+",
@@ -38,6 +44,12 @@ const metrics: Metric[] = [
     prefix: "+",
     suffix: "%",
     label: "Average wallet size increase",
+  },
+  {
+    value: "94",
+    numericValue: 94,
+    suffix: "%",
+    label: "Customer verbatim coverage, CSAT analysis",
   },
   {
     value: "20",
@@ -118,10 +130,10 @@ export default function Metrics() {
           </h2>
         </motion.div>
 
-        {/* Brick/staggered layout: 8-col grid, top items span 2 cols, bottom offset by 1 */}
+        {/* Two even rows of four. The earlier staggered brick assumed seven
+            metrics and left an orphan row as soon as the count changed. */}
         <div className="grid grid-cols-2 lg:grid-cols-8 gap-x-8 gap-y-10 sm:gap-x-10 sm:gap-y-12">
-          {/* Top row: 4 metrics, each spanning 2 cols */}
-          {metrics.slice(0, 4).map((metric, i) => (
+          {metrics.map((metric, i) => (
             <motion.div
               key={metric.label}
               initial={{ opacity: 0, y: 24 }}
@@ -146,31 +158,6 @@ export default function Metrics() {
             </motion.div>
           ))}
 
-          {/* Bottom row: 3 metrics, offset by 1 col to stagger under the gaps */}
-          {metrics.slice(4).map((metric, i) => (
-            <motion.div
-              key={metric.label}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{
-                duration: 0.5,
-                delay: (i + 4) * 0.08,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-              className={`text-center lg:col-span-2 ${i === 0 ? "lg:col-start-2" : ""}`}
-            >
-              <div className="text-4xl sm:text-5xl font-bold text-accent font-serif italic mb-2">
-                <CountUp
-                  target={metric.numericValue}
-                  prefix={metric.prefix}
-                  suffix={metric.suffix}
-                  isDecimal={metric.value.includes(".")}
-                />
-              </div>
-              <p className="text-muted text-sm leading-snug">{metric.label}</p>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>

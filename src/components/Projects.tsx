@@ -128,6 +128,60 @@ const projects: Project[] = [
       fit: "contain",
     },
   },
+  {
+    id: "podsearch",
+    title: "PodSearch",
+    role: "Solo Builder (Personal Project)",
+    challenge:
+      "A podcast piles up hundreds of hours of audio and nobody can find the bit they remember.",
+    actions: [
+      "Built a conversational search agent over a channel's transcripts: RAG on pgvector with Voyage embeddings",
+      "Answers cite the episodes they came from and link to the exact second in the video",
+      "Wrote a retrieval evaluation with two labelled question sets, on-topic and off-topic, to place the relevance threshold from data instead of guesswork",
+    ],
+    result:
+      "Running on a real podcast archive. The evaluation caught a timestamp bug that looked like a ranking problem.",
+    stack: ["Next.js", "pgvector", "Voyage", "Claude", "Postgres"],
+    media: {
+      src: "/projects/podsearch.webp",
+      alt: "The PodSearch entry screen with suggested questions",
+      fit: "cover",
+    },
+  },
+  {
+    id: "reel-coach",
+    title: "Reel Coach",
+    role: "Solo Builder (Personal Project)",
+    challenge:
+      "Instagram's raw numbers tell a creator what happened, never what to change next.",
+    actions: [
+      "Built an app that reads each post's metrics and compares them against the account's own median rather than a generic benchmark",
+      "Every claim it makes names the metric behind it, so the advice can be checked",
+      "Wrote a golden-set eval over the AI output: creative text at temperature 1 defeats exact-string tests, so it asserts on properties instead, including grounded claims and a banned marketing vocabulary",
+    ],
+    result: "In production, used by a creator and their editor",
+    stack: ["Instagram API", "Claude", "Prisma", "Next.js"],
+    media: {
+      src: "/projects/reel-coach.webp",
+      alt: "Reel Coach analysing a post on mobile",
+      fit: "contain",
+    },
+  },
+  {
+    id: "internal-ai-agent",
+    title: "Internal AI Agent on Company Data",
+    role: "Product Manager & Builder @ Qobuz",
+    challenge:
+      "Cross-checking a drop in satisfaction against what customers actually write meant opening several tools, so nobody did it.",
+    actions: [
+      "Built an agent you question in plain language, which looks up the answer across product indicators and live satisfaction feedback and replies citing its sources",
+      "Runs on a local model, so no company data leaves the machine",
+      "Turned a cross-check nobody was performing into a question anyone can ask out loud",
+    ],
+    result:
+      "Produced a useful business finding the day it was connected",
+    stack: ["Local LLM", "RAG", "SQL", "Next.js", "FastAPI"],
+  },
 ];
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {

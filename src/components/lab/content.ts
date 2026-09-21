@@ -174,6 +174,21 @@ export const WORK: Work[] = [
     link: { href: "https://www.podiumfantasy.com/", label: "Play it" },
   },
   {
+    id: "manypod",
+    name: "ManyPod",
+    context: "Personal, MVP in validation",
+    mode: "built",
+    year: "2026",
+    proof:
+      "One recorded episode goes in, and transcript, subtitles, thumbnails, clips and publishable posts come out. Chains transcription, media processing and LLM generation into a single pipeline, with 237 test files behind it.",
+    stack: ["Claude", "Deepgram", "FFmpeg", "Prisma", "S3"],
+    media: {
+      src: "/projects/manypod.webp",
+      alt: "ManyPod on mobile",
+      fit: "contain",
+    },
+  },
+  {
     id: "podsearch",
     name: "PodSearch",
     context: "Personal",

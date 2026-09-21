@@ -117,7 +117,7 @@ export default function Lab() {
           className="mx-auto max-w-6xl px-6 py-28 sm:px-12 lg:pl-20"
         >
           <h2 className="lab-display mb-4 max-w-[14ch] text-[clamp(2rem,5vw,3.5rem)]">
-            Eleven things, three ways of working
+            Twelve things, three ways of working
           </h2>
           <p className="mb-14 max-w-prose text-[var(--paper-dim)]">
             Some of these I led, some I built with my own hands, and some I

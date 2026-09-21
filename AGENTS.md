@@ -2,7 +2,7 @@
 
 Personal portfolio site for Mathias Boulanger. Single page, statically exported, deployed to GitHub Pages.
 
-Live at https://mathiasboulanger.github.io/portfolio/
+Live at https://mathias-boulanger.com/
 
 ## Commands
 

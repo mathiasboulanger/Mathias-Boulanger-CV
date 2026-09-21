@@ -32,6 +32,6 @@ Content changes are worth more than code changes in this repo. The copy is what 
 
 ### Git
 
-Personal repo, so the identity is PanaBs. A hook blocks commits made with the work identity. If it fires, check `git config user.email` and `gh auth status` rather than working around it.
+Personal repo, so the identity is mathiasboulanger. A hook blocks commits made with the work identity. If it fires, check `git config user.email` and `gh auth status` rather than working around it.
 
 Commit messages describe the change and nothing about how it was produced. No co-author trailers.

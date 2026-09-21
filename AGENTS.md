@@ -2,7 +2,7 @@
 
 Personal portfolio site for Mathias Boulanger. Single page, statically exported, deployed to GitHub Pages.
 
-Live at https://panabs.github.io/Mathias-Boulanger-CV/
+Live at https://mathiasboulanger.github.io/Mathias-Boulanger-CV/
 
 ## Commands
 

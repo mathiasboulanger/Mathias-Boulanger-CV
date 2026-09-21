@@ -187,6 +187,7 @@ export const WORK: Work[] = [
       alt: "The PodSearch entry screen",
       fit: "cover",
     },
+    link: { href: "https://podsearch.cafeyambicion.com/", label: "Ask it something" },
   },
   {
     id: "reel-coach",

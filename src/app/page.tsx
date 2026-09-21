@@ -188,6 +188,14 @@ export default function Lab() {
                 >
                   LinkedIn
                 </a>
+                <a
+                  href={NEXT.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="lab-data border-b border-[var(--line)] pb-1 text-[var(--paper-dim)] transition-colors duration-200 hover:border-[var(--paper)] hover:text-[var(--paper)]"
+                >
+                  GitHub
+                </a>
               </div>
             </div>
 

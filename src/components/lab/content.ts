@@ -241,6 +241,7 @@ export const NEXT = {
   body: "A company building AI products, or one that needs someone to make AI land inside it. Remote, across European and American time zones.",
   email: "boulangermathias1@gmail.com",
   linkedin: "https://linkedin.com/in/mathiasboulanger",
+  github: "https://github.com/mathiasboulanger",
 };
 
 export const STAGES = [

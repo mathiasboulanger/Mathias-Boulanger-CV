@@ -1,7 +1,7 @@
 # Mathias Boulanger
 
 Personal site and CV, live at
-**[mathiasboulanger.github.io/Mathias-Boulanger-CV](https://mathiasboulanger.github.io/Mathias-Boulanger-CV/)**.
+**[mathiasboulanger.github.io/portfolio](https://mathiasboulanger.github.io/portfolio/)**.
 
 Next.js 16 with the App Router, Tailwind v4, Framer Motion, exported as a
 static site and served from GitHub Pages.
@@ -26,7 +26,7 @@ npm install
 npm run dev
 ```
 
-Then open **http://localhost:3000/Mathias-Boulanger-CV**, not the bare root.
+Then open **http://localhost:3000/portfolio**, not the bare root.
 The `basePath` applies in development too, so `localhost:3000` returns a 404.
 
 ```bash

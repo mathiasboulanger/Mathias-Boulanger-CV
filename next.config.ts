@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   // this, `next export` writes out/lab.html and /lab 404s in production while
   // working locally.
   trailingSlash: true,
-  basePath: "/Mathias-Boulanger-CV",
+  basePath: "/portfolio",
   images: {
     unoptimized: true,
   },
